@@ -1,0 +1,4 @@
+Customer review testing code for Home Depot
+
+Question 1) related files: ReviewAnalysisManager, ReviewAnalysisService, ReviewAnalysisServiceImpl
+I have two implementations for this question. The first one is in file ReviewAnalysisManager. It makes use of the existing CustomerReviewManager to get all reviews for a given product. Then it use either parallelStream in Java 1.8 to filter the required range and calculate the total or loop thurs the list of CustomerReview to get the total for the required range. The second implementation provides at service level which is the same as existing CustomerReviewService. This implementation contains two files: ReviewAnalysisService and ReviewAnalysisServiceImpl. It uses CustomerReviewSerivce to get all the reviews for a given product at data model layer. Then it uses either parallelStream in Java 1.8 to calculate the total of the required range or loop thurs in Java 1.7 to get the total of the required range.
