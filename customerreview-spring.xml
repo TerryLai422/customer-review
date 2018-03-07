@@ -39,7 +39,7 @@
 		<property name="searchRestrictionService" ref="searchRestrictionService"/>
 		<property name="configurationService" ref="configurationService"/>
 	</bean>
-
+<!-- Added by Terry Lai 20180306 start -->
  <bean id="curseWordList" class = "de.hybris.platform.customerreview.CurseWordFromFile">
       <constructor-arg type = "java.lang.String" value = "d:/curseword.txt"/>
  </bean>	
@@ -53,5 +53,5 @@
  <bean id="reviewAnalysisService" class="de.hybris.platform.customerreview.ReviewAnalysisServiceImpl" parent="abstractBusinessService" scope="tenant">
 	<property name="customerReviewService" ref="customerReviewService"/>
  </bean>
-
+<!-- Added by Terry Lai 20180306 end -->
 </beans>
