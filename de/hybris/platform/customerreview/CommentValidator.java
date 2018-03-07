@@ -3,9 +3,20 @@ package de.hybris.platform.customerreview;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
+import de.hybris.platform.customerreview.impl.Required;
+
 public class CommentValidator implements Validator {
 
 	private CurseWord curseWord;
+
+	public CurseWord getCurseWord() {
+		return curseWord;
+	}
+
+	@Required
+	public void setCurseWord(CurseWord curseWord) {
+		this.curseWord = curseWord;
+	}
 	
 	@Override
 	public boolean supports(Class<?> arg0) {

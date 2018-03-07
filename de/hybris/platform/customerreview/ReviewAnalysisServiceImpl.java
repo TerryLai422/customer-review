@@ -7,12 +7,23 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 import de.hybris.platform.core.model.product.ProductModel;
 import de.hybris.platform.customerreview.impl.AbstractBusinessService;
+import de.hybris.platform.customerreview.impl.Required;
 import de.hybris.platform.customerreview.model.CustomerReviewModel;
 
 public class ReviewAnalysisServiceImpl extends AbstractBusinessService implements ReviewAnalysisService {
 	
 	private CustomerReviewService customerReviewService;
-	
+		
+	public CustomerReviewService getCustomerReviewService() {
+		return customerReviewService;
+	}
+
+	@Required
+	public void setCustomerReviewService(CustomerReviewService customerReviewService) {
+		this.customerReviewService = customerReviewService;
+	}
+
+
 	public Integer getNumberOfReviews(ProductModel paramProductModel, final Double minRating, final Double maxRating) {
 		List<CustomerReviewModel> reviews = customerReviewService.getReviewsForProduct(paramProductModel);;
 		
