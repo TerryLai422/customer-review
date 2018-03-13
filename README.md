@@ -1,5 +1,7 @@
 Customer review testing code for Home Depot
 
+Note: I remove the package folder for easier reading purpose.
+
 Question 1) related files: ReviewAnalysisManager, ReviewAnalysisService, ReviewAnalysisServiceImpl
 
 I have two implementations for this question. 
