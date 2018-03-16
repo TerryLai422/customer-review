@@ -1,4 +1,4 @@
-Customer review testing code for Home Depot
+Customer review testing code
 
 Note: I remove the package folder for easier reading purpose.
 
